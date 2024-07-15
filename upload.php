@@ -154,7 +154,7 @@ function createWEBPFromDataBase()
   $imagem = base64_decode($result['img']);
   $userId = $result['userid'];
 
-  $handle = fopen($dir . "/ednaldo" . $userId . image_type_to_extension(IMAGETYPE_WEBP), 'w');
+  $handle = fopen($dir /*. '/nomeDoArquivo.webp'*/ . $userId . image_type_to_extension(IMAGETYPE_WEBP), 'w');
   fwrite($handle, $imagem);
   fclose($handle);
 }
